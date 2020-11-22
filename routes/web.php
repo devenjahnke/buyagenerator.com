@@ -17,14 +17,6 @@ Route::get('/', function () {
     return \Inertia\Inertia::render('Landing');
 })->name('landing');
 
-Route::get('/2', function () {
-    return \Inertia\Inertia::render('Landing2');
-})->name('landing2');
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
-
-Route::get('/components', function () {
-    return \Inertia\Inertia::render('Components');
-});
