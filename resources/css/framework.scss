@@ -1,0 +1,47 @@
+h1 {
+    @apply font-serif font-bold text-4xl;
+}
+h2 {
+    @apply font-serif font-bold text-3xl;
+}
+h3 {
+    @apply font-serif font-bold text-2xl;
+}
+h4 {
+    @apply font-serif font-bold text-xl;
+}
+h5 {
+    @apply font-serif font-bold text-lg;
+}
+h6 {
+    @apply font-serif font-bold text-base;
+}
+p {
+    @apply font-sans font-normal text-base mt-6;
+}
+.wrapper {
+    @apply container mx-auto px-8;
+}
+
+.page-section {
+    @apply py-16;
+}
+
+.form {
+    .form-group:not(:first-child) {
+        @apply mt-6;
+    }
+}
+.form-group {
+    @apply flex flex-col;
+}
+.form-label {
+    @apply font-sans font-normal text-sm text-secondary-dark;
+}
+.form-input {
+    @apply mt-1 font-sans text-primary-dark font-normal text-base rounded-sm border-gray-200;
+}
+.form-textarea {
+    @apply mt-1 font-sans text-primary-dark font-normal text-base rounded-sm border-gray-200;
+}
+
