@@ -45,7 +45,7 @@
     import JetButton from '@/Jetstream/Button'
     import JetFormSection from '@/Jetstream/FormSection'
     import JetInput from '@/Jetstream/Input'
-    import JetInputError from '@/Jetstream/InputError'
+    import JetInputError from '@/Components/Framework/Form/FInputError'
     import JetLabel from '@/Jetstream/Label'
 
     export default {

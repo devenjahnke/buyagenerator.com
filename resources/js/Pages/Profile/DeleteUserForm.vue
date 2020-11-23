@@ -57,7 +57,7 @@
     import JetDialogModal from '@/Jetstream/DialogModal'
     import JetDangerButton from '@/Jetstream/DangerButton'
     import JetInput from '@/Jetstream/Input'
-    import JetInputError from '@/Jetstream/InputError'
+    import JetInputError from '@/Components/Framework/Form/FInputError'
     import JetSecondaryButton from '@/Jetstream/SecondaryButton'
 
     export default {

@@ -40,6 +40,7 @@ class PublishRolesAndPermissions extends Command
     public function handle()
     {
         // Define application roles
+        $admin = Role::findOrCreate('admin');
         $maintainer = Role::findOrCreate('maintainer');
         $company = Role::findOrCreate('company');
 

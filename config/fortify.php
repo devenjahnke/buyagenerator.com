@@ -78,6 +78,8 @@ return [
 
     'domain' => null,
 
+    'path' => 'partner',
+
     /*
     |--------------------------------------------------------------------------
     | Fortify Routes Middleware
@@ -117,7 +119,7 @@ return [
     |
     */
 
-    'views' => true,
+    'views' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -133,12 +135,12 @@ return [
     'features' => [
         Features::registration(),
         Features::resetPasswords(),
-        // Features::emailVerification(),
-        Features::updateProfileInformation(),
-        Features::updatePasswords(),
-        Features::twoFactorAuthentication([
-            'confirmPassword' => true,
-        ]),
+        Features::emailVerification(),
+//        Features::updateProfileInformation(),
+//        Features::updatePasswords(),
+//        Features::twoFactorAuthentication([
+//            'confirmPassword' => true,
+//        ]),
     ],
 
 ];

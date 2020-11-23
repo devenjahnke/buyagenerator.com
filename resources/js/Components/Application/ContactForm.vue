@@ -3,7 +3,7 @@
         <!-- Form Input Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             <!-- First Name -->
-            <div class="form-group col-span-1">
+            <div class="form-group-vertical col-span-1">
                 <label for="firstname" class="form-label">
                     First Name
                 </label>
@@ -16,7 +16,7 @@
                 >
             </div>
             <!-- Last Name -->
-            <div class="form-group col-span-1">
+            <div class="form-group-vertical col-span-1">
                 <label for="lastname" class="form-label">
                     Last Name
                 </label>
@@ -29,7 +29,7 @@
                 >
             </div>
             <!-- Email -->
-            <div class="form-group col-span-1 md:col-span-2 xl:col-span-1">
+            <div class="form-group-vertical col-span-1 md:col-span-2 xl:col-span-1">
                 <label for="email" class="form-label">
                     Email
                 </label>
@@ -42,7 +42,7 @@
                 >
             </div>
             <!-- Message -->
-            <div class="form-group col-span-full">
+            <div class="form-group-vertical col-span-full">
                 <label for="message" class="form-label">
                     Message
                 </label>
@@ -55,7 +55,7 @@
                 ></textarea>
             </div>
             <!-- Submit Button -->
-            <div class="form-group col-span-full">
+            <div class="form-group-vertical col-span-full">
                 <FButton class="">
                     Send your message.
                 </FButton>

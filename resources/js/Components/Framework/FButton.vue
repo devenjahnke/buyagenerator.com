@@ -1,6 +1,5 @@
 <template>
     <a
-        :href="href"
         class="block py-2 px-4 w-full bg-primary-dark rounded-sm font-serif font-normal text-base text-center text-white hover:bg-accent-light transition shadow">
         <slot></slot>
     </a>
@@ -10,12 +9,6 @@
 
 export default {
     name: "framework-button",
-    props: {
-        href: {
-            default: '#',
-            type: String,
-        },
-    }
 }
 
 </script>

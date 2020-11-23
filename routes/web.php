@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,50 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return \Inertia\Inertia::render('Landing');
+    return \Inertia\Inertia::render('Public/Landing');
 })->name('landing');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
+
+
+/**
+ * Authentication View Routes
+ */
+Route::get('/partner/login', function () {
+    return \Inertia\Inertia::render('Auth/Login');
+})->middleware(['guest'])->name('login');
+
+Route::get('/partner/register', function () {
+    return \Inertia\Inertia::render('Auth/Register');
+})->middleware(['guest'])->name('register');
+
+Route::get('/partner/email/verify', function () {
+    if (Auth::user()->hasVerifiedEmail()) {
+        return redirect(\App\Providers\RouteServiceProvider::HOME);
+    }
+    return \Inertia\Inertia::render('Auth/VerifyEmail');
+})->middleware(['auth'])->name('verification.notice');
+
+Route::get('/partner/forgot-password', function () {
+    return \Inertia\Inertia::render('Auth/ForgotPassword');
+})->middleware(['guest'])->name('password.request');
+
+Route::get('/partner/password-reset-sent', function () {
+    return \Inertia\Inertia::render('Auth/PasswordResetSent');
+})->middleware(['guest']);
+
+Route::get('/partner/reset-password/{token}', function (Request $request, $token) {
+    return \Inertia\Inertia::render('Auth/ResetPassword', [
+        'email' => $request['email'],
+        'token' => $token,
+    ]);
+})->middleware(['guest'])->name('password.reset');
+
+/**
+ * Partner Portal
+ */
+Route::get('/partner/dashboard', function () {
+    return \Inertia\Inertia::render('Partner/Dashboard');
+})->middleware(['auth', 'verified']);

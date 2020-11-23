@@ -45,6 +45,12 @@
                     >
                         Our tools.
                     </a>
+                    <inertia-link
+                        href="/partner/login"
+                        class="inline-block font-sans text-base font-normal text-white hover:underline"
+                    >
+                        Partner portal.
+                    </inertia-link>
                 </nav>
                 <!-- Legal -->
                 <div class="mt-16 text-center">

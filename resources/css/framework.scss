@@ -28,16 +28,19 @@ p {
 }
 
 .form {}
-.form-group {
-    @apply flex flex-col;
+.form-group-vertical {
+    @apply flex flex-col space-y-1;
+}
+.form-group-horizontal {
+    @apply flex flex-row space-x-2;
 }
 .form-label {
     @apply font-sans font-normal text-secondary-dark text-sm md:text-base xl:text-lg;
 }
 .form-input {
-    @apply mt-1 font-sans text-primary-dark font-normal rounded-sm border-gray-200 text-base md:text-lg xl:text-xl;
+    @apply font-sans text-primary-dark font-normal rounded-sm border-gray-200 text-base md:text-lg xl:text-xl;
 }
 .form-textarea {
-    @apply mt-1 font-sans text-primary-dark font-normal rounded-sm border-gray-200 text-base md:text-lg xl:text-xl;
+    @apply font-sans text-primary-dark font-normal rounded-sm border-gray-200 text-base md:text-lg xl:text-xl;
 }
 
