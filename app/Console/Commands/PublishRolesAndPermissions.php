@@ -64,7 +64,7 @@ class PublishRolesAndPermissions extends Command
 
         // Output permission table and success message
         $this->call('permission:show');
-        $this->info('Roles & permissions successfully published.');
+        $this->info('Roles & permissions successfully published!');
 
         return 0;
     }
