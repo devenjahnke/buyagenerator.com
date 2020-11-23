@@ -1,13 +1,13 @@
 <template>
-    <div class="min-h-screen flex flex-col">
+    <div class="flex flex-col min-h-screen">
         <!-- Header -->
-        <header class="h-16 w-full bg-primary-dark">
+        <header class="w-full h-16 bg-primary-dark">
             <!-- Responsive Container -->
-            <div class="wrapper h-full flex items-center justify-between">
+            <div class="flex items-center justify-between h-full wrapper">
                 <!-- Logo/Title -->
                 <a
                     href="/"
-                    class="font-serif font-bold text-xl text-white hover:underline"
+                    class="font-serif text-xl font-bold text-white hover:underline"
                 >
                     BuyAGenerator
                 </a>
@@ -22,39 +22,39 @@
         </main>
 
         <!-- Footer -->
-        <footer class="w-full py-16 flex items-center bg-primary-dark">
+        <footer class="flex items-center w-full page-section bg-primary-dark">
             <!-- Responsive Container -->
             <div class="wrapper">
                 <!-- Navigation -->
                 <nav class="flex flex-col items-center space-y-4">
                     <a
                         href="#"
-                        class="inline-block font-sans text-white font-normal text-base hover:underline"
+                        class="inline-block font-sans text-base font-normal text-white hover:underline"
                     >
                         Our network.
                     </a>
                     <a
                         href="#"
-                        class="inline-block font-sans text-white font-normal text-base hover:underline"
+                        class="inline-block font-sans text-base font-normal text-white hover:underline"
                     >
                         Our documentation.
                     </a>
                     <a
                         href="#"
-                        class="inline-block font-sans text-white font-normal text-base hover:underline"
+                        class="inline-block font-sans text-base font-normal text-white hover:underline"
                     >
                         Our tools.
                     </a>
                 </nav>
                 <!-- Legal -->
-                <div class="text-center mt-16">
+                <div class="mt-16 text-center">
                     <a
                         href="#"
-                        class="font-sans text-white font-normal text-sm hover:underline"
+                        class="font-sans text-sm font-normal text-white hover:underline"
                     >
                         Developed by Deven Jahnke
                     </a>
-                    <p class="mt-3 font-sans text-white font-normal text-sm">
+                    <p class="mt-3 font-sans text-sm font-normal text-white">
                         Copyright © 2020 BuyAGenerator. All Rights Reserved.
                     </p>
                 </div>

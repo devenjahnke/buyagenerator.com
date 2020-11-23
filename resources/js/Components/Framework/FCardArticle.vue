@@ -1,7 +1,7 @@
 <template>
-    <FCard class="mt-12">
+    <FCard class="">
         <template v-slot:header>
-            <h6 class="font-sans text-sm text-secondary-dark">
+            <h6 class="font-sans text-secondary-dark text-sm md:text-base xl:text-lg">
                 <slot name="subtitle"></slot>
             </h6>
             <h3 class="mt-1">

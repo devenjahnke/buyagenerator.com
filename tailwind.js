@@ -17,9 +17,9 @@ module.exports = {
             },
             backgroundColor: {
                 'primary-dark': colors.trueGray["900"],
-                'primary-light': colors.blueGray["50"],
+                'primary-light': colors.blueGray["100"],
                 'secondary-dark': colors.trueGray["700"],
-                'secondary-light': colors.blueGray['100'],
+                'secondary-light': colors.blueGray['200'],
                 'form-outline': colors.trueGray["200"],
                 'accent-light': colors.blue["600"],
                 'accent-dark': colors.blue["900"],

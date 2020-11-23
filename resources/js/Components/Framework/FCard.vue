@@ -1,9 +1,9 @@
 <template>
-    <article class="bg-white shadow-md rounded-sm p-4">
+    <article class="bg-white shadow-lg rounded-sm p-4 flex flex-col md:p-5 lg:p-6 xl:p-8">
         <header class="" v-if="hasHeader">
             <slot name="header"></slot>
         </header>
-        <main class="" v-if="hasBody">
+        <main class="flex-grow" v-if="hasBody">
             <slot name="body"></slot>
         </main>
         <footer class="" v-if="hasFooter">
