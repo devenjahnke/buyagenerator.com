@@ -9,16 +9,24 @@
                     href="/partner/dashboard"
                     class="font-serif text-xl font-bold text-white hover:underline"
                 >
-                    BuyAGenerator <span class="font-sans">| Partner Portal</span>
+                    BuyAGenerator
                 </inertia-link>
-                <!-- Logout -->
-                <a
-                    href="#"
-                    class="font-serif font-normal text-white underline text-sm md:text-base xl:text-lg hover:no-underline"
-                    v-on:click.prevent="handleLogout"
-                >
-                    Logout
-                </a>
+                <!-- Navigation Menu -->
+                <Navigation>
+                    <inertia-link
+                        href="/partner/dashboard"
+                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
+                    >
+                        Action dashboard.
+                    </inertia-link>
+                    <a
+                        href="#"
+                        class="block h-full flex items-center justify-center bg-secondary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
+                        v-on:click.prevent="handleLogout"
+                    >
+                        Sign out.
+                    </a>
+                </Navigation>
             </div>
         </header>
 
@@ -53,8 +61,13 @@
 </template>
 
 <script>
+import Navigation from "@/Components/Application/Navigation";
+
 export default {
     name: 'PartnerLayout',
+    components: {
+        Navigation,
+    },
     methods: {
         handleLogout: function () {
             this.$inertia.post('/partner/logout');

@@ -12,7 +12,26 @@
                     BuyAGenerator
                 </a>
                 <!-- Navigation -->
-                <Navigation></Navigation>
+                <Navigation>
+                    <a
+                        href="#"
+                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
+                    >
+                        Talk to an expert.
+                    </a>
+                    <a
+                        href="#"
+                        class="block h-full flex items-center justify-center bg-secondary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
+                    >
+                        Explore our resources.
+                    </a>
+                    <a
+                        href="#"
+                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
+                    >
+                        Test out our tools.
+                    </a>
+                </Navigation>
             </div>
         </header>
 

@@ -21,7 +21,7 @@
                 v-on:click="toggleIsActive"
             ></div>
             <section class="absolute block w-3/4 h-full right-0 flex flex-col bg-secondary-light shadow-lg">
-                <header class="px-8 h-16 flex justify-between items-center bg-secondary-dark">
+                <header class="px-8 h-16 flex justify-between items-center bg-secondary-dark sm:pr-16 lg:pr-24 xl:pr-28">
                     <h4 class="font-sans text-white">
                         Navigation
                     </h4>
@@ -35,24 +35,7 @@
                     </button>
                 </header>
                 <nav class="flex-1 flex flex-col justify-evenly">
-                    <a
-                        href="#"
-                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
-                    >
-                        Talk to an expert.
-                    </a>
-                    <a
-                        href="#"
-                        class="block h-full flex items-center justify-center bg-secondary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
-                    >
-                        Explore our resources.
-                    </a>
-                    <a
-                        href="#"
-                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
-                    >
-                        Test out our tools.
-                    </a>
+                    <slot></slot>
                 </nav>
             </section>
         </aside>

@@ -1,5 +1,5 @@
 <template>
-    <div class="f-card-article-grid grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-12 md:gap-16">
+    <div class="f-card-article-grid grid grid-cols-1 lg:grid-cols-4 2xl:grid-cols-6 gap-12 md:gap-16">
         <slot></slot>
     </div>
 </template>
@@ -16,7 +16,7 @@ export default {
         @apply col-span-1;
     }
 }
-@screen md {
+@screen lg {
     .f-card-article-grid {
         * {
             @apply col-span-2;
@@ -27,7 +27,7 @@ export default {
     }
 }
 
-@screen xl {
+@screen 2xl {
     .f-card-article-grid {
         * {
             &:last-child:nth-child(3n) {
