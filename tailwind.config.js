@@ -31,7 +31,15 @@ module.exports = {
                 'secondary-light': colors.blueGray['100'],
                 'accent-light': colors.blue["600"],
                 'accent-dark': colors.blue["900"],
-            }
+            },
+            borderColor: {
+                'primary-dark': colors.trueGray["900"],
+                'primary-light': colors.blueGray["50"],
+                'secondary-dark': colors.trueGray["700"],
+                'secondary-light': colors.blueGray['100'],
+                'accent-light': colors.blue["600"],
+                'accent-dark': colors.blue["900"],
+            },
         },
         textColor: colors,
         backgroundColor: colors,
@@ -41,8 +49,11 @@ module.exports = {
     },
 
     variants: {
-        opacity: ['responsive', 'hover', 'focus', 'disabled'],
-        backgroundColor: ['even', 'odd', 'hover'],
+        extend: {
+            opacity: ['disabled'],
+            backgroundColor: ['even', 'odd'],
+            margin: ['first'],
+        },
     },
 
     plugins: [

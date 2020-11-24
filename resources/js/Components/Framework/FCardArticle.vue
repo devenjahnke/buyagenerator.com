@@ -14,7 +14,10 @@
             </p>
         </template>
         <template v-slot:footer>
-            <FButton class="mt-8">
+            <FButton
+                class="mt-8"
+                :href="href"
+            >
                 <slot name="action"></slot>
             </FButton>
         </template>
@@ -30,6 +33,11 @@ export default {
     components: {
         FCard,
         FButton,
+    },
+    props: {
+        href: {
+            default: '#',
+        },
     }
 }
 </script>

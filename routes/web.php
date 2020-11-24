@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocumentationPageController;
 use App\Http\Controllers\UserAccountController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -65,3 +66,17 @@ Route::get('/partner/dashboard', function () {
 })->middleware(['auth', 'verified']);
 
 Route::get('/partner/account', [UserAccountController::class, 'show']);
+
+/**
+ * Public Facing
+ */
+Route::get('/documentation', [DocumentationPageController::class, 'index']);
+Route::get('/documentation/{page:slug}', [DocumentationPageController::class, 'show']);
+Route::get('/partner/documentation', [DocumentationPageController::class, 'index'])
+    ->name('partner.documentation.index');
+Route::get('/partner/documentation/page/create', [DocumentationPageController::class, 'create']);
+Route::get('/partner/documentation/page/{page}/edit', [DocumentationPageController::class, 'edit']);
+Route::post('/partner/documentation/page', [DocumentationPageController::class, 'store']);
+Route::put('/partner/documentation/page/{page}', [DocumentationPageController::class, 'update']);
+Route::delete('/partner/documentation/page/{page}', [DocumentationPageController::class, 'destroy']);
+
