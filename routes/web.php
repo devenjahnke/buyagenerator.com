@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DocumentationPageController;
 use App\Http\Controllers\DocumentationPageSectionController;
 use App\Http\Controllers\UserAccountController;
@@ -95,4 +96,10 @@ Route::post('/partner/documentation/page/{page}/section', [DocumentationPageSect
 Route::put('/partner/documentation/page/{page}/section/{section}', [DocumentationPageSectionController::class, 'update']);
 Route::delete('/partner/documentation/page/{page}/section/{section}', [DocumentationPageSectionController::class, 'destroy']);
 
+Route::post('/contact', ContactController::class);
 
+Route::get('mailable', function () {
+    $contact = App\Models\Contact::find(1);
+
+    return new App\Mail\ContactReceived($contact);
+});
