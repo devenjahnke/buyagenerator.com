@@ -9,7 +9,10 @@
                 <h3 class="mt-4 font-sans font-normal text-secondary-dark">
                     Invest in a backup generator and know you'll have electricity when you need it most.
                 </h3>
-                <FButton class="mt-12 text-lg">
+                <FButton
+                    class="mt-12 text-lg"
+                    href="/documentation"
+                >
                     Find your generator.
                 </FButton>
             </div>
@@ -40,7 +43,10 @@
                 <!-- Card Article Grid -->
                 <FCardArticleGrid class="mt-12">
                     <!-- Our Network -->
-                    <FCardArticle class="">
+                    <FCardArticle
+                        class=""
+                        :disabled="true"
+                    >
                         <template v-slot:subtitle>
                             Our Network
                         </template>
@@ -55,7 +61,10 @@
                         </template>
                     </FCardArticle>
                     <!-- Our Documentation -->
-                    <FCardArticle class="">
+                    <FCardArticle
+                        class=""
+                        href="/documentation"
+                    >
                         <template v-slot:subtitle>
                             Our Documentation
                         </template>
@@ -70,7 +79,10 @@
                         </template>
                     </FCardArticle>
                     <!-- Our Tools -->
-                    <FCardArticle class="">
+                    <FCardArticle
+                        class=""
+                        :disabled="true"
+                    >
                         <template v-slot:subtitle>
                             Our Tools
                         </template>

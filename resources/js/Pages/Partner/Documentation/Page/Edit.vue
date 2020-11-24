@@ -10,7 +10,7 @@
                             class="block py-2 px-4 w-full bg-primary-dark rounded-sm font-serif font-normal text-base text-center text-white hover:bg-accent-light transition shadow"
                             v-on:click.prevent="handleDeletePage"
                         >
-                            Delete Page
+                            Delete page.
                         </a>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                                 v-on:pageFormSubmit="handleUpdatePage"
                             >
                                 <template #submitButton>
-                                    Update Page
+                                    Update page.
                                 </template>
                             </DocumentationPageForm>
                         </form>
@@ -45,7 +45,7 @@
                             class=""
                             :href="'/partner/documentation/page/' + $props.page.id + '/section/create'"
                         >
-                            Create Section
+                            Create section.
                         </FButton>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                                     class=""
                                     :href="'/partner/documentation/page/' + page.id + '/section/' + section.id + '/edit'"
                                 >
-                                    Manage Section
+                                    Manage section.
                                 </FButton>
                             </div>
                         </template>

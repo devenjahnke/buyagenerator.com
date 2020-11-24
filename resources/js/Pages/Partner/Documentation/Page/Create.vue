@@ -15,7 +15,7 @@
                                 v-on:pageFormSubmit="handleCreatePage"
                             >
                                 <template #submitButton>
-                                    Create Page
+                                    Create page.
                                 </template>
                             </DocumentationPageForm>
                         </form>

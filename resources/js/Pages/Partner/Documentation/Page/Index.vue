@@ -11,7 +11,7 @@
                             class=""
                             href="/partner/documentation/page/create"
                         >
-                            Create Page
+                            Create page.
                         </FButton>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                                     class=""
                                     :href="'/partner/documentation/page/' + page.id + '/edit'"
                                 >
-                                    Manage Page
+                                    Manage page.
                                 </FButton>
                             </div>
                         </template>

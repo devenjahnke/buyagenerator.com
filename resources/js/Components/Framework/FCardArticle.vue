@@ -17,6 +17,7 @@
             <FButton
                 class="mt-8"
                 :href="href"
+                :disabled="disabled"
             >
                 <slot name="action"></slot>
             </FButton>
@@ -38,6 +39,9 @@ export default {
         href: {
             default: '#',
         },
+        disabled: {
+            default: false,
+        }
     }
 }
 </script>

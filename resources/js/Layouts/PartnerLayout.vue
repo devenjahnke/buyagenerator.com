@@ -17,7 +17,7 @@
                         href="/partner/dashboard"
                         class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
                     >
-                        Action dashboard.
+                        Dashboard.
                     </inertia-link>
                     <a
                         href="#"

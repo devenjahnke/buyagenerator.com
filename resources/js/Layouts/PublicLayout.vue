@@ -15,19 +15,19 @@
                 <Navigation>
                     <a
                         href="#"
-                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
+                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white nav-disabled "
                     >
                         Talk to an expert.
                     </a>
-                    <a
-                        href="#"
+                    <inertia-link
+                        href="/documentation"
                         class="block h-full flex items-center justify-center bg-secondary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
                     >
                         Explore our resources.
-                    </a>
+                    </inertia-link>
                     <a
                         href="#"
-                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white"
+                        class="block h-full flex items-center justify-center bg-primary-light font-sans font-normal text-primary-dark text-lg transition hover:bg-accent-light hover:text-white nav-disabled "
                     >
                         Test out our tools.
                     </a>
@@ -101,5 +101,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
+.nav-disabled {
+    @apply cursor-not-allowed hover:text-primary-dark hover:bg-secondary-light;
+}
 </style>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DocumentationPageController;
+use App\Http\Controllers\DocumentationPageSectionController;
 use App\Http\Controllers\UserAccountController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -68,15 +69,30 @@ Route::get('/partner/dashboard', function () {
 Route::get('/partner/account', [UserAccountController::class, 'show']);
 
 /**
- * Public Facing
+ * Public Documentation
  */
 Route::get('/documentation', [DocumentationPageController::class, 'index']);
 Route::get('/documentation/{page:slug}', [DocumentationPageController::class, 'show']);
+
+/**
+ * Partner Documentation Page
+ */
 Route::get('/partner/documentation', [DocumentationPageController::class, 'index'])
     ->name('partner.documentation.index');
 Route::get('/partner/documentation/page/create', [DocumentationPageController::class, 'create']);
-Route::get('/partner/documentation/page/{page}/edit', [DocumentationPageController::class, 'edit']);
+Route::get('/partner/documentation/page/{page}/edit', [DocumentationPageController::class, 'edit'])
+    ->name('partner.documentation.edit');
 Route::post('/partner/documentation/page', [DocumentationPageController::class, 'store']);
 Route::put('/partner/documentation/page/{page}', [DocumentationPageController::class, 'update']);
 Route::delete('/partner/documentation/page/{page}', [DocumentationPageController::class, 'destroy']);
+
+/**
+ * Partner Documentation Page Section
+ */
+Route::get('/partner/documentation/page/{page}/section/create', [DocumentationPageSectionController::class, 'create']);
+Route::get('/partner/documentation/page/{page}/section/{section}/edit', [DocumentationPageSectionController::class, 'edit']);
+Route::post('/partner/documentation/page/{page}/section', [DocumentationPageSectionController::class, 'store']);
+Route::put('/partner/documentation/page/{page}/section/{section}', [DocumentationPageSectionController::class, 'update']);
+Route::delete('/partner/documentation/page/{page}/section/{section}', [DocumentationPageSectionController::class, 'destroy']);
+
 
