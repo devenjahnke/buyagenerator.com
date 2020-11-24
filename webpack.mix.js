@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-require('laravel-mix-tailwind');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,14 +11,28 @@ require('laravel-mix-tailwind');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .vue({
-        version: 2
-    })
+mix.webpackConfig(require('./webpack.config'))
+    .js('resources/js/app.js', 'public/js')
+    .vue({ version: 2 })
     .sass('resources/css/app.scss', 'public/css')
-    .webpackConfig(require('./webpack.config'))
-    .tailwind();
+    .options({
+        postCss: [
+            require('tailwindcss')('./tailwind.js')
+        ]
+    })
+    .extract();
 
+
+// Start BrowserSync
 if (!mix.inProduction()) {
     mix.browserSync('homestead.test');
+}
+
+if (mix.inProduction()) {
+    mix.minify([
+            'public/js/app.js',
+            'public/css/app.css',
+        ])
+        .sourceMaps()
+        .version();
 }
