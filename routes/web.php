@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserAccountController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -62,3 +63,5 @@ Route::get('/partner/reset-password/{token}', function (Request $request, $token
 Route::get('/partner/dashboard', function () {
     return \Inertia\Inertia::render('Partner/Dashboard');
 })->middleware(['auth', 'verified']);
+
+Route::get('/partner/account', [UserAccountController::class, 'show']);

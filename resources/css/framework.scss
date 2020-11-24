@@ -19,6 +19,9 @@ h6 {
 p {
     @apply font-sans font-normal mt-6 text-base md:text-lg xl:text-xl;
 }
+a {
+    @apply font-sans font-normal text-base md:text-lg xl:text-xl;
+}
 .wrapper {
     @apply container mx-auto px-8 sm:px-16 lg:px-24 xl:px-28;
 }

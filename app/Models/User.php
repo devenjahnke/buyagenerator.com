@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Collection;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -59,5 +60,34 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $appends = [
         'profile_photo_url',
+        'permission',
+        'role',
     ];
+
+    protected $with = [
+        'permissions',
+        'roles',
+    ];
+
+    /**
+     * Get all of the user's permissions for the appended permission attribute.
+     *
+     * @return Collection
+     */
+    public function getPermissionAttribute()
+    {
+        return $this->getAllPermissions()
+            ->mapWithKeys(function ($item) {
+                return [$item['name'] => true];
+            });
+    }
+
+    public function getRoleAttribute()
+    {
+        return $this->getRoleNames()
+            ->mapWithKeys(function ($item) {
+                return [$item => true];
+            });
+    }
+
 }

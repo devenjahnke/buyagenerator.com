@@ -42,6 +42,7 @@ module.exports = {
 
     variants: {
         opacity: ['responsive', 'hover', 'focus', 'disabled'],
+        backgroundColor: ['even', 'odd', 'hover'],
     },
 
     plugins: [
